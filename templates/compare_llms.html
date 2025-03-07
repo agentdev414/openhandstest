@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LLM Comparison</title>
+</head>
+<body>
+    <h1>LLM Comparison</h1>
+    <p>Select LLMs to compare:</p>
+    <form method="post">
+        <input type="checkbox" id="gpt2" name="llm" value="gpt2">
+        <label for="gpt2">GPT-2</label><br>
+        <input type="checkbox" id="bart" name="llm" value="facebook/bart-large-cnn">
+        <label for="bart">BART</label><br>
+        <input type="checkbox" id="flan-t5" name="llm" value="google/flan-t5-base">
+        <label for="flan-t5">FLAN-T5</label><br><br>
+        <label for="task">Task:</label>
+        <select id="task" name="task">
+            <option value="summarization">Summarization</option>
+            <option value="question-answering">Question Answering</option>
+            <option value="text-generation">Text Generation</option>
+            <option value="要約">要約</option>
+            <option value="質問応答">質問応答</option>
+            <option value="テキスト生成">テキスト生成</option>
+        </select><br><br>
+        <label for="input_data">Input Data:</label><br>
+        <textarea id="input_data" name="input_data"></textarea><br><br>
+        <input type="submit" value="Compare">
+    </form>
+</body>
+</html>

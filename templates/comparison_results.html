@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LLM Comparison Results</title>
+</head>
+<body>
+    <h1>LLM Comparison Results</h1>
+    <h2>Input Data:</h2>
+    <p>{{ input_data }}</p>
+    <h2>Results:</h2>
+    {% for llm, result in results.items() %}
+        <h3>{{ llm }}</h3>
+        <p>{{ result }}</p>
+    {% endfor %}
+</body>
+</html>
