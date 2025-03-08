@@ -41,7 +41,7 @@ def compare_llms():
                 generator = pipeline(actual_task, model=llm)
                 results[llm] = generator(input_data)[0]['generated_text']
             except Exception as e:
-                results[llm] = f"Error: {e}"
+                results[llm] = f"Error: {e}. Cloudflare Worker AI is not used."
 
         return render_template('comparison_results.html', results=results, input_data=input_data)
     return render_template('compare_llms.html')
